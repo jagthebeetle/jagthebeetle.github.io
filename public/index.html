@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>what</title>
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/is.css">
+</head>
+<body>
+
+<script type='text/x-handlebars'>
+	<header>
+		<div class="title">What.</div>
+		<nav>
+			<div class="label">About</div>
+			<ul>
+				<img src="img/me.jpg">
+				<li>Jonathan</li>
+				<li>21</li>
+				<li>Ann Arbor</li>
+				<li>Cambridge</li>
+				<li>NYC</li>
+				<div class="divider"></div>
+				<li>Code-monkeying</li>
+				<li>Words</li>
+				<li>Web Design</li>
+				<li>Pseudo-science</li>
+				<li>Music</li>
+				<li>Learning</li>
+			</ul>
+		</nav>
+	</header>
+	{{outlet}}
+</script>
+
+<script type='text/x-handlebars' data-template-name="index">
+	<div class="articlecontainer">
+		{{#each article in model}}
+			<article {{bind-attr data-date=article.created}}>
+				<h1>{{article.title}}</h1>
+				<em class="date">{{format-date article.created}}</em>
+				{{{article.body}}}
+			</article>
+		{{/each}}
+		<div class="loadingspincircle"></div>
+		<div class="endoftheroad">This is the end.</div>
+	</div>
+</script>
+
+<script src="js/libs/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/libs/waypoints.min.js"></script>
+<script src="js/libs/handlebars-1.1.2.js"></script>
+<script src="js/libs/ember-1.5.1.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/router.js"></script>
+<script type="text/javascript" src="js/models/post.js"></script>
+<script type="text/javascript" src="js/what.js"></script>
+</body>
+</html>

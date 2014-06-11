@@ -2,8 +2,7 @@
   DEPENDENCIES
 \**************/
 
-var hbs = require('hbs'),
-	controller = require('./controllers.js');
+var controller = require('./controllers.js');
 
 /************\
   MIDDLEWARE
@@ -14,25 +13,11 @@ var hbs = require('hbs'),
   EXPOSE
 \********/
 exports.setMiddleware = function(app) {
-	app.set('view engine','hbs');
-
-	// handlebars helper
-	hbs.registerHelper('formatDate',function(date) {
-		var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-		if (!date)
-			return "";
-		else
-			return date.getDate() + " "
-				+ months[date.getMonth()] + " "
-				+ date.getFullYear(); 
-	});
-
 	console.log("Middleware set.");
 }
 
 exports.setRoutes = function(app) {
-	app.get('/',function(req,res) {
-		controller.index(res);
-	});
+	app.get('/',controller.index)
+	   .get('/api/:date?',controller.api);
 	console.log("Routes set.");
 }

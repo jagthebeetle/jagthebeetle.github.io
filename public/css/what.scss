@@ -71,11 +71,28 @@ body {
 	margin:0;
 	font-family:'Lato';
 	padding:0;
+	padding-bottom:5px;
 }
 
 body,header::after,header::before {
 	@extend .full-width;
 	@extend .full-height;
+}
+
+.endoftheroad {
+	display:none;
+	width:$article-width;
+	@extend .light-shadow;
+	color:#fff;
+	height:40px;
+	line-height:40px;
+	font-size:1.25em;
+	padding:0 $article-padding;
+	margin-bottom:20px;
+	margin-right:20px;
+	text-align:center;
+	text-shadow: 1px 1px 1px #0b1e31;
+	background-color:rgba(255,255,255,0.4);
 }
 
 header {
@@ -164,7 +181,7 @@ header nav .label {
 }
 
 header nav:hover {
-	background-color:rgba(206,206,206,0.45);
+	background-color:rgba(0,0,0,0.45);
 	width:200px;
 	height:500px;
 }
@@ -207,4 +224,28 @@ html {
 	height:100%;
 	margin:0;
 	padding:0;
+}
+
+.loadingspincircle {
+  width: 24px;
+  height: 24px;
+  border-left: 2px solid #fff;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:$article-margin - 5px;
+  
+  border-radius: 100%;
+    
+    animation: spin .6s linear infinite;
+    -webkit-animation: spin .6s linear infinite;
+
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform:rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate( 360deg );
+  }
 }

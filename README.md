@@ -14,10 +14,10 @@ into a browser window from a server. My skepticism cringes at the idea of its be
 
 ## Built with:
 * Server-side:
-..* express
-..* mongoose
-..* node
+  * express
+  * mongoose
+  * node
 * Client-side:
-..* Ember.js
-..* waypoints.js (because why not?)
+  * Ember.js
+  * waypoints.js (because why not?)
 

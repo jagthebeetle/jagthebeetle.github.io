@@ -12,8 +12,10 @@ exports.index = function(req,res) {
 
 exports.api = function(req,res) {
 	if (req.params.date !== undefined) {
+		console.log("Fetching post older than " + req.params.date);
 		var limit = new Date(req.params.date);
-		Models.entry.find({'created':{"$lt":limit}}).lean().sort('-created').limit(searchLimit)
+		Models.entry.find({'created':{"$lt":limit}})
+			.lean().sort('-created').limit(searchLimit)
 			.exec(function(err,entries) {
 				if(err)
 					return console.log('Entry model database error.');

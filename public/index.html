@@ -43,8 +43,12 @@
 				{{{article.body}}}
 			</article>
 		{{/each}}
-		<div class="loadingspincircle"></div>
-		<div class="endoftheroad">This is the end.</div>
+		{{#unless atEnd}}
+				<div class="loadingspincircle"></div>
+		{{/unless}}
+		{{#if atEnd}}
+			<div class="endoftheroad">This is the end.</div>
+		{{/if}}
 	</div>
 </script>
 
@@ -55,6 +59,6 @@
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/router.js"></script>
 <script type="text/javascript" src="js/models/post.js"></script>
-<script type="text/javascript" src="js/what.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
 </body>
 </html>

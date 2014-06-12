@@ -3,9 +3,9 @@ App.IndexController = Ember.ArrayController.extend({
 	actions:{
 		load:function() {
 			if (!this.get('atEnd')) {
-				var date = this.get('content').get('lastObject').created;
 				// prevent multiple loads
 				if (this.get('loading')) return;
+				var date = this.get('content').get('lastObject').created;
 				this.set('loading',true);
 				// propagate event up to route
 				this.get('target').send('apiQuery',date);

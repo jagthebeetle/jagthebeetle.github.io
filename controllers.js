@@ -1,34 +1,38 @@
-var searchLimit = 1;
-
 /**************\
   DEPENDENCIES
 \**************/
 
-var Models = require('./models');
+module.exports = function(models) {
 
-exports.index = function(req,res) {
-	res.sendfile('index.html');
-};
+	// hooks to which the router
+	// can refer based on url entry point
 
-exports.api = function(req,res) {
-	if (req.params.date !== undefined) {
-		console.log("Fetching post older than " + req.params.date);
-		var limit = new Date(req.params.date);
-		Models.entry.find({'created':{"$lt":limit}})
-			.lean().sort('-created').limit(searchLimit)
-			.exec(function(err,entries) {
-				if(err)
-					return console.log('Entry model database error.');
-				else	
-					res.json(entries);
-			});
-	} else {
-		Models.entry.find().lean().sort('-created').limit(searchLimit)
-			.exec(function(err,entries) {
-				if(err)
-					return console.log('Entry model database error.');
-				else	
-					res.json(entries);
-			});
+	// root: will return the Ember app
+	this.index = function(req,res) {
+		res.sendfile('index.html');
+	};
+
+	/*	api: checks whether request is:
+		- empty - assume this is the app's base request
+	   	- /:date - get post older than date
+	   	- /post/:id - locate specific post (not implemented)
+		
+		request information has been fully processed at this
+		point; response object is sent to model for final 
+		processing.
+	*/
+	this.api = function(req,res) {
+		// if (/:date)
+		if (req.params.date !== undefined) {
+			var limit = new Date(req.params.date);
+			models.entry.getOlder(res,limit);
+		} else { //empty
+			models.entry.getOne(res);
+		}
+	}
+
+	this.error = function(req,res) {
+		console.log("Not found");
+		res.sendfile('404.html');
 	}
 }

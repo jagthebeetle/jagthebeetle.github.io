@@ -20,7 +20,6 @@
   "homepage": "https://github.com/jagthebeetle/jagthebeetle.github.io",
   "dependencies": {
     "express": "^4.4.2",
-    "hbs": "^2.7.0",
     "path": "^0.4.9",
     "mongoose": "^3.8.12"
   }

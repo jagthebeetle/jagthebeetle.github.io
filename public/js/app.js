@@ -14,6 +14,10 @@ App.IndexView = Ember.View.extend({
 				$(window).trigger('waypointed');
 		},{offset:'100%'});
 	},
+	willDestroyElement: function(){
+	  // have to use the same argument to `off` that we did to `on`
+	  $(window).off('waypointed', $.proxy(this.waypointed, this));
+	},
 	waypointed:function() {
 		this.get('controller').send('load');
 	}

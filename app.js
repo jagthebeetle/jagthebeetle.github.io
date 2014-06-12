@@ -1,5 +1,5 @@
 /**************\
-  DEPENDENCIES 
+  dependencies 
 \**************/
 var express = require('express'),
 	app = express(),
@@ -8,7 +8,7 @@ var express = require('express'),
 	mongoose = require('mongoose');
 
 /************\
-  INITIALIZE
+  initialize
 \************/
 // connect to db
 mongoose.connect('mongodb://localhost/what');
@@ -20,7 +20,7 @@ config.setMiddleware(app);
 config.setRoutes(app);
 
 /********\ 
-  DEPLOY 
+  deploy 
 \********/
 var port = process.env.PORT || 3000;
 app.listen(port);

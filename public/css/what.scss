@@ -27,8 +27,7 @@ article {
 	padding:$article-padding;
 	margin:$article-margin;
 	margin-left:0;
-	color:$font-color;
-	font-family:'Lato';
+	color:#262626;
 	font-weight:300;
 	line-height:1.5em;
 	@extend .light-shadow;
@@ -53,6 +52,8 @@ article img {
 }
 
 article h1 {
+	font-family:'Poiret One';
+	font-weight:normal;
 	border-bottom:1px solid rgba(0,0,0,0.2);
 }
 
@@ -69,9 +70,10 @@ body {
 	background-attachment:fixed;
 	color:#fff;
 	margin:0;
-	font-family:'Lato';
+	font-family:'Lato','Helvetica Neue',sans-serif;
 	padding:0;
 	padding-bottom:5px;
+	-webkit-font-smoothing: antialiased;
 }
 
 body,header::after,header::before {
@@ -95,7 +97,6 @@ body,header::after,header::before {
 }
 
 header {
-	font-weight:100;
 	position:fixed;
 	top:50px;
 	@extend .full-width;
@@ -129,6 +130,8 @@ header::before {
 }
 
 header .title {
+	font-family:'Poiret One',sans-serif;
+	font-weight:400;
 	padding-left:40px;
 	height:$header-height;
 	font-size:4em;
@@ -137,6 +140,7 @@ header .title {
 }
 
 header nav {
+	font-weight:300;
 	position:absolute;
 	height:30px;
 	color:#fff;
@@ -164,7 +168,7 @@ header nav ul {
 
 header nav ul .divider {
 	height:1px;
-	border-bottom:1px solid rgba(40,40,40,0.1);
+	border-bottom:1px solid rgba(163,163,163,0.5);
 	width:100%;
 }
 

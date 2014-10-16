@@ -17,8 +17,7 @@ article {
   padding: 25px;
   margin: 20px;
   margin-left: 0;
-  color: #002347;
-  font-family: 'Lato';
+  color: #262626;
   font-weight: 300;
   line-height: 1.5em; }
 
@@ -38,6 +37,8 @@ article img {
   box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 3px 0; }
 
 article h1 {
+  font-family: 'Poiret One';
+  font-weight: normal;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
 
 blockquote {
@@ -52,9 +53,10 @@ body {
   background-attachment: fixed;
   color: #fff;
   margin: 0;
-  font-family: 'Lato';
+  font-family: 'Lato','Helvetica Neue',sans-serif;
   padding: 0;
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  -webkit-font-smoothing: antialiased; }
 
 .endoftheroad {
   width: 500px;
@@ -70,7 +72,6 @@ body {
   background-color: rgba(255, 255, 255, 0.4); }
 
 header {
-  font-weight: 100;
   position: fixed;
   top: 50px;
   height: 100px;
@@ -98,6 +99,8 @@ header::before {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
 
 header .title {
+  font-family: 'Poiret One',sans-serif;
+  font-weight: 400;
   padding-left: 40px;
   height: 100px;
   font-size: 4em;
@@ -105,6 +108,7 @@ header .title {
   text-transform: lowercase; }
 
 header nav {
+  font-weight: 300;
   position: absolute;
   height: 30px;
   color: #fff;
@@ -129,7 +133,7 @@ header nav ul {
 
 header nav ul .divider {
   height: 1px;
-  border-bottom: 1px solid rgba(40, 40, 40, 0.1);
+  border-bottom: 1px solid rgba(163, 163, 163, 0.1);
   width: 100%; }
 
 header nav ul img {

@@ -10,7 +10,14 @@ html {
 	width:100%;
 }
 
-h1 {
-	padding-left:25px;
-	border-bottom:1px solid #ddd;
+.title {
+	width:250px;
+}
+
+.title .main {
+	text-transform:uppercase;
+}
+
+.title .sub {
+	text-transform:uppercase;
 }

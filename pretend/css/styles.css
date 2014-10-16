@@ -8,10 +8,12 @@ body {
 footer {
 	position:fixed;
 	bottom:0;
-	height:25px;
+	height:60px;
+	width:100%;
 	border-top:1px solid #ddd;
 	text-align:center;
-	color:#ddd;
+	line-height:60px;
+	color:#eee;
 	font-size:.75em;
 }
 

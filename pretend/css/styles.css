@@ -5,17 +5,27 @@ body {
 	margin:0;
 }
 
+footer {
+	position:fixed;
+	bottom:0;
+	height:25px;
+	border-top:1px solid #ddd;
+	text-align:center;
+	color:#ddd;
+	font-size:.75em;
+}
+
 html {
 	height:100%;
 	width:100%;
 }
 
 .title {
-	width:250px;
+	width:960px;
 	margin-left:auto;
 	margin-right:auto;
 	border-bottom:1px solid #777;
-	color:#333;
+	color:#777;
 	text-align:center;
 }
 

@@ -14,16 +14,17 @@ html {
 	width:250px;
 	margin-left:auto;
 	margin-right:auto;
-	border-bottom:1px solid #333;
+	border-bottom:1px solid #777;
 	color:#333;
+	text-align:center;
 }
 
 .title .main {
 	text-transform:uppercase;
-	font-size:4.2em;
+	font-size:3em;
 }
 
 .title .sub {
 	text-transform:uppercase;
-	font-size:2em;
+	font-size:1.5em;
 }

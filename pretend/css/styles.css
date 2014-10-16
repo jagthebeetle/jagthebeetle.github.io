@@ -3,6 +3,7 @@ body {
 	background-color:#003366;
 	height:100%;
 	color:#fff;
+	margin:0;
 }
 
 html {
@@ -11,6 +12,7 @@ html {
 }
 
 h1 {
-	background-color:#330000;
-	box-shadow:3px 3px 0 rgba(0,0,0,0.5);
+	background-color:#660000;
+	box-shadow:0 0 3px rgba(0,0,0,0.5);
+	padding-left:25px;
 }

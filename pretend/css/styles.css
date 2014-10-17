@@ -29,13 +29,15 @@ html {
 	background-image:url("./img/goose.jpg");
 	background-size:cover;
 	font-size:2.5em;
-	font-family:'Open Sans';
+	font-family:'Lato';
 	padding-top:25px;
 }
 
 .hero .call {
+	width:300px;
+	padding-left:50px;
 	color:#fff;
-	text-shadow:0 0 #000;
+	text-shadow:0 0 3px #000;
 }
 
 .title {

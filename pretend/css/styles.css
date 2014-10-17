@@ -39,6 +39,7 @@ html {
 .hero .call {
 	text-align:right;
 	width:300px;
+	float:right;
 	padding-right:50px;
 	color:#fff;
 	text-shadow:0 0 3px rgba(0,0,0,0.7);

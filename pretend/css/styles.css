@@ -71,6 +71,7 @@ html {
 	width:250px;
 	height:250px;
 	border-radius:177px;
+	box-shadow:0 3px rgba(0,0,0,0.24)
 }
 
 .nav {

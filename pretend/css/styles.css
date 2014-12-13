@@ -1,3 +1,13 @@
+a {
+	text-decoration:none;
+	color:#775500;
+}
+
+a:hover {
+	color:#996600;
+}
+
+
 body {
 	font-family:'Cardo';
 	height:100%;
@@ -54,6 +64,10 @@ html {
 	margin-left:auto;
 	margin-right:auto;
 	font-size:1.2em;
+}
+
+.nav {
+	text-align:center;
 }
 
 @media (max-width:970px) {

@@ -66,6 +66,13 @@ html {
 	font-size:1.2em;
 }
 
+.michael img {
+	border:2px solid #fff;
+	width:250px;
+	height:250px;
+	border-radius:177px;
+}
+
 .nav {
 	text-align:center;
 }

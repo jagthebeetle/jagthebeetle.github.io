@@ -6,6 +6,9 @@ a {
 a:hover {
 	color:#996600;
 }
+#audio {
+	display:none;
+}
 
 .title a {
 	transition:all .2s linear;

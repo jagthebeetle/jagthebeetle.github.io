@@ -9,6 +9,12 @@
 <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="pretend/css/styles.css">
+    <script>
+  function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+                 }
+   </script>
 </head>
 <body>
 <!-- Google Tag Manager -->
@@ -24,8 +30,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <div class="maincontent">
 <div class="michael">
-	<img src="michael.png">
+	<img src="michael.png" onclick="play()">
 	<p>Michael Jackson</p>
+	<audio id="audio" src="michael.m4a" ></audio>
 </div>
 </div>
 <footer>

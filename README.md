@@ -21,3 +21,4 @@ into a browser window from a server. My skepticism cringes at the idea of its be
   * Ember.js
   * waypoints.js (because why not?)
 
+NB. It also has a very random site living and [jagthebeetle.github.io](http://jagthebeetle.github.io), purely in existence for the purpose of testing Google Tag Manager and Analytics.

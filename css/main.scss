@@ -1,0 +1,33 @@
+---
+---
+@charset "utf-8";
+
+$base-font-size:   1.5em;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+$base-easing: ease-in-out;
+$base-transition-time: .2s;
+
+$text-color:       #333;
+$primary-color:    #0059b3;
+$accent-color:     #fd5e53;
+$dark-accent:      #990000;
+$light-accent:     #fff6a6;
+
+$nav-height:       70px;
+$ribbon-height:    7px;
+
+$content-width:    800px;
+$on-palm:          600px;
+$on-laptop:        800px;
+
+@mixin transition($attributes, $time, $function) {
+	-webkit-transition: $attributes $time $function;
+	-moz-transition: $attributes $time $function;
+	-o-transition: $attributes $time $function;
+	transition: $attributes $time $function;
+}
+
+@import "base";
+@import "syntax-highlighting";

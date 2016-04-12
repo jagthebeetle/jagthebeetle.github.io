@@ -1,43 +1,25 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<meta name="description" content="Geese Consulting offers businesses fresh perspectives that allow industry expertise and unique data-driven strategy to synergize and promote effective management."/>
-	<meta name="keywords" content="consulting,strategy,data-driven,business,geese consulting,management consulting,data-driven consulting,strategic analysis,business development"/>
-	<title>Geese Consulting | Data-Driven Business Insights</title>
-</head>
-<body>
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MMSQGN"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MMSQGN');</script>
-<!-- End Google Tag Manager -->
+---
+layout: default
+---
+<!-- POSTS -->
+<md-content layout-padding class="md-whiteframe-1dp posts">
+  <md-list>
+    {% for post in site.posts %}
+    {% unless post.categories contains 'partials' %}
+    <a href="{{post.url}}">
+    <md-list-item class="md-3-line">
+      <div class="md-list-item-text">
+        <h3> {{ post.title }} </h3>
+        <h4> {{ post.date | date: "%-d %B %Y" }} </h4>
+        <p> {{ post.excerpt }} </p>
+      </div>
+    </md-list-item>
+    </a>
+    {% endunless %}
+    {% endfor %}
+  </md-list>
+</md-content>
+<!-- CONTENT -->
+<md-content layout-padding class="window md-whiteframe-1dp" ng-view></md-content>
 
-<div class="title"><a href="/"><div class="main">Geese</div><div class="sub">Consulting</div></a></div>
-<div class="nav"><a href="founding.html">Founding Partners</a></div>
-<div class="hero"><div class="call">No nonsense economics for a transforming economy.</div></div>
-<div class="maincontent">
-<p>
-	Not everyone can be handsome and wealthy. But we guarantee that you can be at least one of those two. Plastic surgeons claim the same. You pick which you prefer.
-</p>
-<p>
-	Building on rich and diverse experiences drawn from every corner of the major cities on the East Coast (and therefore, the world), Geese Consulting complements your business and industry expertise with keen questioning and data-driven strategy.
-</p>
-<p>
-	We are of the millenial age. We have better tools than sticks and stones. And we know how to deploy them in pursuit of crystal clear, actionable insight. 
-</p>
-<h2>sus.</h2>
-</div>
-<footer>
-Founded in A2.
-</footer>
-<link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="pretend/css/styles.css">
-</body>
-</html>
+<!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->

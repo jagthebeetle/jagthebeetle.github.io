@@ -1,5 +1,3 @@
+_site/
 .DS_Store
-node_modules
-public/img
-public/css/img
-*~
+.sass-cache

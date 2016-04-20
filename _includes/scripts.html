@@ -1,100 +1,57 @@
+<script type="text/javascript" src="/js/sierpinski_carpet.js"></script>
 <script type="text/javascript">
 (function() {
-var WIDTH = 800;
-var HEIGHT = 800;
-var svg = d3.select('#srp').append('svg')
-  .attr('width', WIDTH)
-  .attr('height', HEIGHT);
+  var svg = d3.select('#braid').append('svg')
+    .attr('width', 300)
+    .attr('height', 300);
+  var g = svg.append('g');
 
-var FRACTAL_DEPTH = 6;
+  var classes = [
+    '#0059b3',
+    '#990000',
+    '#fd5e53',
+  ];
 
-/* requiescat in pace
-for (var i = 0; i < FRACTAL_DEPTH; i++) {
-  var stretch = WIDTH / Math.pow(3, i+1);
-  for (var j = 0; j < Math.pow(9, i); j++) {
-    var yPos = 1 + 3 * Math.floor(j / Math.pow(3, i));
-    var xPos = 1 + 3 * j % Math.pow(3, i+1);
-    svg.append('rect')
-      .attr('x', xPos * stretch)
-      .attr('y', yPos * stretch)
-      .attr('width', stretch)
-      .attr('height', stretch);
+  var stripLength = 10;
+
+  var a1 = 0,
+      b1 = 1,
+      a2 = 3,
+      b2 = 1;
+  var x1, x2, y1, y2, index;
+  for (var i = 0; i < 19; i++) {
+    classes.forEach(function(type, j) {
+      index = classes.length * i + j;
+
+      x1 = stripLength * a1;
+      x2 = stripLength * a2;
+      y1 = stripLength * b1;
+      y2 = stripLength * b2;
+      y1 += !(index % 2) ? 0 : -2.5;
+      y2 += !(index % 2) ? 0 : 2.5;
+      x1 += !(index % 2) ? -2.5 : 0;
+      x2 += !(index % 2) ? 2.5 : 0;
+
+
+      var path = g.append('path')
+        .attr('d', 'M' + x1 + ' ' + y1 + ' L' + x2 + ' ' + y2)
+        .attr('stroke', type);
+
+      var totalLength = path.node().getTotalLength();
+      path.attr("stroke-dasharray", totalLength)
+        .attr("stroke-dashoffset", totalLength)
+        .transition()
+        .duration(600)
+        .delay(200 * index)
+        .attr("stroke-dashoffset", 0);
+      a1 += (index % 2) ? -1 : 2;
+      a2 += (index % 2) ? 2 : -1;
+      b1 += (index % 2) ? 2 : -1;
+      b2 += (index % 2) ? -1 : 2;
+    });
   }
-}
-*/
-
-(function fillCells(i, j) {
-  fillCell(i, j);
-  if (i < FRACTAL_DEPTH) {
-    window.setTimeout(function() {
-      if (j < Math.pow(9, i)) {
-        fillCells(i, j+1);
-      } else {
-        fillCells(i+1, 0)
-      }
-    }, 200)
-  }
-})(0, 0);
-
-function fillCell(depth, division) {
-  var stretch = WIDTH / Math.pow(3, depth + 1);
-  var yPos = 1 + 3 * Math.floor(division / Math.pow(3, depth));
-  var xPos = 1 + 3 * division % Math.pow(3, depth+1);
-  
-  svg.append('rect')
-    .attr('x', xPos * stretch)
-    .attr('y', yPos * stretch + 50)
-    .attr('width', stretch)
-    .attr('height', stretch)
-    .attr('opacity', 0)
-  .transition()
-  .duration(200)
-    .attr('y', yPos * stretch)
-    .attr('opacity', 1)
-}
-})()
-</script>
-<script type="text/javascript">
-(function() {
-var svg = d3.select('#braid').append('svg')
-  .attr('width',300)
-  .attr('height', 500);
-var g = svg.append('g').attr('transform',
-  'rotate(-45)');
-
-var classes = [
-'#0059b3',
-'#990000',
-'#fd5e53',
-];
-
-var stepWidth = 10;
-var padding = 10;
-var bendLength = stepWidth * 3
-var interpolator = d3.interpolateNumber(1e-6, 3*stepWidth);
-
-for (var i = 0; i < 15; i++) {
-classes.forEach(function(type, j) {
-  var index = classes.length*i + j
-  var y1 = stepWidth * (index);
-  var y2 = stepWidth * (index + 3);
-  var x1 = (index % 2) ? 0:bendLength;
-  var x2 = (index % 2) ? bendLength:0;
-
-  var path = g.append('path')
-    .attr('d','M' + x1 + ' ' + y1 + ' L' + x2 + ' ' + y2)
-    .attr('stroke', type);
-    
-  var totalLength = path.node().getTotalLength()+10;
-  path.attr("stroke-dasharray", totalLength + " " + totalLength)
-      .attr("stroke-dashoffset", totalLength+10)
-      .transition()
-      .duration(600)
-      .delay(200*index)
-      .attr("stroke-dashoffset", 0);
-});
-}
 })();
+
 </script>
 <script type="text/javascript" src="/js/main.js"></script>
 

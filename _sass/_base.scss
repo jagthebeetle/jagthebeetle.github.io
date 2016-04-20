@@ -11,7 +11,7 @@ body {
 }
 
 md-content {
-	background:rgba(255, 255, 255, 0.4);
+	background:$card-bg;
 	margin-bottom: 2 * $ribbon-height;
 	color:#333;
 	border-radius: 3px;
@@ -27,6 +27,18 @@ md-list-item {
 	}
 }
 
+time {
+	font-style: italic;
+	font-size:$small-font-size;
+}
+
+.posts,.muted,.window {
+	box-sizing: border-box;
+	width:$content-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* VISUALIZATION */
 #srp {
 	width:100%;
@@ -35,6 +47,7 @@ md-list-item {
 	display: flex;
 	align-items: center;
 	top:0;
+	pointer-events: none;
 }
 
 #braid {
@@ -43,7 +56,9 @@ md-list-item {
 	right:0;
 	path {
 		stroke-width:5px;
-		stroke-linecap:square;
+	}
+	g {
+		transform-origin: 50% 50%;
 	}
 }
 
@@ -51,7 +66,7 @@ svg {
 	margin:0 auto;
 
 	rect {
-		stroke:#bfd6eb;
+		stroke:lighten($primary-color,50%);
 		stroke-width:1px;
 		fill:none;
 		pointer-events:none;
@@ -65,42 +80,96 @@ svg {
 	height:$nav-height;
 	line-height:$nav-height;
 	border:1px solid #000;
-	text-align: center;
 	margin: (2 * $ribbon-height) auto;
 	@include transition(all,$base-transition-time,$base-easing);
 	color:#000;
 	z-index:1;
 	position: relative;
+	&:hover {
+		background-color:#000;
+		color:#fff;
+	}
+	a {
+		color:#fff;
+	}
 }
 
-#title:hover {
-	background-color:#000;
-	color:#fff;
+.center {
+	text-align: center;
 }
 
-#title a {
-	color:#fff;
+.navbar {
+	position: fixed;
+	left:calc((100% - #{$content-width})/4);
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	div {
+		margin: 5px;
+		width:75px;
+		height:75px;
+		text-align: center;
+		display: table;
+		border:1px solid #000;
+		box-sizing: border-box;
+		@include transition(all,$base-transition-time,$base-easing);
+		&:hover {
+			background-color:#000;
+			color:#fff;
+			height:200px;
+		}
+		p {
+			font-family: 'Righteous';
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+	}
 }
 
-.posts,.muted {
-	width:$content-width;
-	margin-left: auto;
-	margin-right: auto;
+.about {
+	p {
+		transform: rotate(0deg);
+		@include transition(transform,$base-transition-time,$base-easing);
+	}
+	&:hover p {
+		transform: rotate(180deg);
+	}
 }
+
+@media (max-width:$content-width + 2*75px) {
+	.navbar {
+		display: none;
+	}
+	#title {
+
+		background-color:#000;
+		color:#fff;
+	}
+}
+
+@media (max-width:$content-width+16px) {
+	.posts,.muted,.window {
+	  width:100%;
+	}
+
+	md-content {
+		border-radius:0;
+	}
+}
+
 .quote {
 	color:#888;
 	font-style:italic;
-	border-left:$ribbon-height solid #888;
+	border-left:$ribbon-height/2 solid #888;
 	margin-left:5px;
+	margin-bottom: 20px;
 }
 
 /* NG-VIEW */
 .window {
 	position: relative;
-	width:$content-width;
-	margin-left: auto;
-	margin-right: auto;
-	background: rgba(255, 255, 255,0.4);
+	background: $card-bg;
 
 	a {
 		color:$primary-color;
@@ -109,10 +178,19 @@ svg {
 	&.ng-enter {
 		transform: translateX(1000px);
 		@include transition(all,$base-transition-time,$base-easing);
+		transition-delay:$base-transition-time;
 	}
 
 	&.ng-enter-active {
 		transform: translateX(0);
+	}
+	&.ng-leave {
+		transform: translateX(0);
+		@include transition(all,$base-transition-time,$base-easing);
+	}
+
+	&.ng-leave-active {
+		transform: translateX(-1000px);
 	}
 }
 

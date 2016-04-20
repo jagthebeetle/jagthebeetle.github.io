@@ -10,8 +10,8 @@ angular.module('jag', [
         .when('/:post*', {
           templateUrl: function(path) {
             var suffixedPath = path.post.replace(/\.html$/, '-partial.html');
-            console.info(suffixedPath);
-            return '/partials/' + suffixedPath;
+            var isPartial = suffixedPath.indexOf('-partial.html') > -1;
+            return (isPartial)? '/partials/' + suffixedPath : suffixedPath + 'partial.html';
           }
         })
         .otherwise('/');

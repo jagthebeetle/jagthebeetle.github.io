@@ -1,27 +1,35 @@
 ---
 layout: post
 title:  "whoami"
-date:   2016-04-02 23:02:34 -0400
+date:   2016-04-19
 categories: musing
 ---
 When it isn't exactly clear what it
-means to begin at the beginning, sometimes a little self-conscious meta-pondering
-provides a useful, and if not, at least entertaining, segue into the material.
+means to begin at the beginning, often a little self-conscious meta-pondering
+provides a useful segue into the material. 
 
-Alternately phrased: if you look into a mirror, you'll either "look, look in the mirror, 
-O look in your distress," as Auden puts it, or you'll end up laughing at just how much
-larger your nose is than you usually imagine. And that's a fine place from which to 
-start a dissertation.
+(I say this from experience: it is how yours truly has vanquished many a disquisition.
+It is how I am beginning right now, thank you very much.)
 
-Case in point: we remark on that hideously extravagant carpet in the background
-(Sierpinski's), wasting your browser's cycles and, should you wish to see the spectacle
-through, your time.
+Alternately phrased, Auden's exhortation is incomplete:
+"Look, look in the mirror, O look in your distress." The saner part always
+ends up laughing at just how much odder your nose and face are than you usually imagine. I have
+never won a laughing contest against myself. And that's a fine place from which to start 
+any old disquisition.
 
-Anyway, some commodious vicus of recirculation may bring us (past Eve and Adam's),
+{: .center}
+![Camera Reflected in Author's Eye](/assets/eye.jpg){: .md-whiteframe-z1}
+
+Case in point: we remark on that hideously extravagant mosaic recapitulating itself
+in the background (a variation on Sierpinski's carpet), wasting your browser's cycles and, 
+should you wish to see the spectacle through, your time. Does it not capture the very notion
+of beginning somewhere and ending nowhere, as any good ramble must?
+
+Anyway, some commodious vicus of recirculation may bring us (past Eve and Adam's)
 back, recursively, to the theme in more rigorous depth (perhaps when the iterations of the 
 universe (or my mind) revisit this spot in a more poetic mood).
 
-But for now, I wend my way more towards the theme of this entry, and away from my
+But for now, I wend my way more towards the theme of this inaugural entry, and away from my
 rhapsodic musings -- towards JavaScript!
 
 I begin with what I proffer as a poetic text – not in that it's successful
@@ -46,7 +54,7 @@ var i = new I();
 i.am(); // ;()am.i?
 {% endhighlight %}
 
-&#35;deep, is all I can say. Feel free to paste that into your browser console – it may
+Feel free to paste that into your browser console – it may
 just be the pithiest phishing scheme a jag has ever come up with. (In fact, it should
 blow your stack, as the kids say, almost immediately.)
 
@@ -65,7 +73,8 @@ How eschatological, how cosmic! Is there a poetry in this? Soi-disant, I think s
 
 (I could make the function a tad more well-behaved by throwing in a `setTimeout`, but
 at that point I'd feel like I was treating `I` like a five-year-old. Let's wait till
-ES6 and optimized tail calls to revisit subjective existence as a recursive loop, [h/t Douglas Hofstadter](https://en.wikipedia.org/wiki/I_Am_a_Strange_Loop).)
+ES6 and optimized tail calls to revisit subjective existence as a recursive loop, 
+[h/t Douglas Hofstadter](https://en.wikipedia.org/wiki/I_Am_a_Strange_Loop).)
 
 Let's try again, more whimsically, a variation:
 
@@ -79,7 +88,7 @@ function I() {
 }
 {% endhighlight %}
 
-Now that's what I call enjambment! One is almost put in mind of [A Commuter's Lament](http://www.nytimes.com/1997/10/12/nyregion/neighborhood-report-midtown-lament-of-commuter-in-8-parts.html), the
+Now that's what I call enjambment!(\n) One is almost put in mind of [A Commuter's Lament](http://www.nytimes.com/1997/10/12/nyregion/neighborhood-report-midtown-lament-of-commuter-in-8-parts.html), the
 darkly crotchety poem gently flicking past NY metro-goers transferring from Port
 Authority to Times Square. Perhaps "A Collegiate Lament," for my take.
 
@@ -87,5 +96,18 @@ Authority to Times Square. Perhaps "A Collegiate Lament," for my take.
 is it a ReferenceError (`mindfulAcceptance is not defined`)?" For the sake of this poem, thankfully,
 mindfulAcceptance is not defined.)
 
+The above parenthetical raises the real crux of these two jocular micro-poems. Apart from their forced
+half-jokes and clearly non-MLA syntax, both poems rely on the melding of their words with abstract computational structures
+simple enough to (hopefully) be relevant and apparent to the lay reader. The first relies on mutual recursion,
+the doom of the attendant infinite loop, and the common trope (to borrow the literary term) of renaming `this` to
+something else. Poets like [deixis](https://en.wikipedia.org/wiki/Deixis), right?
 
+The second is perhaps more pedantic in inviting the reader to run the code in their head: toLoveAgain is meant to throw
+an error (suggested by the ensuing `catch` block, the playful suggestion of catching mono after this attempt). Simple enough,
+but mindfulAcceptance is meant to throw an error that ends up uncaught. The poem reads without this imaginary run (this psycho-execution? Sounds grim.), but only some programmatic perusal reveals the structure entire.
 
+Hm, so I've written two poems here that have crash-and-burn errors as their point – revealing? Perhaps. But that's to say
+nothing of the perhaps more idyllic poems that trees and bloom filters and maybe the odd adjacency list might invite.
+
+Call this a manifesto of [Wagnerian proportions](https://en.wikipedia.org/wiki/Gesamtkunstwerk), a dilettantish titillation of mental
+structures as disparate as newlines and verse – a hint at the syncretic, rich tapestries of the inner (ignorant) 21st-century mind.

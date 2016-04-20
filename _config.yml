@@ -15,7 +15,7 @@ description: > # this means to ignore newlines until "baseurl:"
   dull and commonplace individual. He notes that the word "legend" means 
   "having to be read." This site is legend.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jagthebeetle.github.io" # the base hostname & protocol for your site
+url: "https://jagthebeetle.github.io" # the base hostname & protocol for your site
 github_username:  jagthebeetle
 
 # Build settings

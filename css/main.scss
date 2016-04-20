@@ -2,7 +2,7 @@
 ---
 @charset "utf-8";
 
-$base-font-size:   1.5em;
+$base-font-size:   1em;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -14,13 +14,11 @@ $primary-color:    #0059b3;
 $accent-color:     #fd5e53;
 $dark-accent:      #990000;
 $light-accent:     #fff6a6;
-
+$card-bg:          rgba(255, 255, 255, 0.8);
 $nav-height:       70px;
 $ribbon-height:    7px;
 
-$content-width:    800px;
-$on-palm:          600px;
-$on-laptop:        800px;
+$content-width:    600px;
 
 @mixin transition($attributes, $time, $function) {
 	-webkit-transition: $attributes $time $function;

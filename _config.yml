@@ -1,22 +1,15 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: Arts & Crufts
-description: > # this means to ignore newlines until "baseurl:"
-  Jonathan Alvarez-Gutierrez's site on Google Analytics, JavaScript, 
+description: >
+  Jonathan Alvarez-Gutierrez's site on Google Analytics, JavaScript, writing,
   and general brooding. Jonathan is a Solutions Consultant at Google in his
   free time, but is otherwise preoccupied with transcendence, (his) thoughts 
   language, games, stories, and music - all of which makes him an unfortunately
-  dull and commonplace individual. He notes that the word "legend" means 
-  "having to be read." This site is legend.
-baseurl: "" # the subpath of your site, e.g. /blog
+  dull and commonplace individual. He notes that the word 'legend' means
+  'having to be read.' This site is legend.
 url: "https://jagthebeetle.github.io" # the base hostname & protocol for your site
-github_username:  jagthebeetle
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed

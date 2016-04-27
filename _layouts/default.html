@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
-
-  <body ng-app="jag" ng-controller="blog as blog">
-    {% include gtm.html %}
-    {% include nav.html %}
-    <div id="srp"></div>
-    <div id="braid"></div>
-    {{ content }}
-    
-    {% include lib.html %}
-    {% include scripts.html %}
-    {% include ribbon.html %}
-  </body>
-
+{% include head.html %}
+<body ng-app="jag">
+{% include gtm.html %}
+{% include nav.html %}
+<div id="srp" role="img" aria-label="Sierpinski Carpet"></div>
+<div id="braid" role="img" aria-label="Self-Drawing Braid"></div>
+{{ content }}
+{% include lib.html %}
+{% include scripts.html %}
+{% include ribbon.html %}
+</body>
 </html>

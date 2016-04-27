@@ -1,0 +1,19 @@
+<md-content layout-padding class="md-whiteframe-1dp posts">
+<md-list>
+{% for post in site.posts %}
+{% unless post.categories contains 'partials' %}
+<a href="{{post.url}}">
+	<md-list-item class="md-3-line">
+	<div class="md-list-item-text">
+		<article>
+			<h3> {{ post.title }} </h3>
+			<h4><time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%-d %B %Y" }}</time></h4>
+			<blockquote cite="{{post.url}}"><p>{{ post.excerpt | strip_html }}</p></blockquote>
+		</article>
+	</div>
+	</md-list-item>
+</a>
+{% endunless %}
+{% endfor %}
+</md-list>
+</md-content>

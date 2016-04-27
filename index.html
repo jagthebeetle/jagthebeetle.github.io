@@ -2,23 +2,7 @@
 layout: default
 ---
 <!-- POSTS -->
-<md-content layout-padding class="md-whiteframe-1dp posts">
-  <md-list>
-    {% for post in site.posts %}
-    {% unless post.categories contains 'partials' %}
-    <a href="{{post.url}}">
-    <md-list-item class="md-3-line">
-      <div class="md-list-item-text">
-        <h3> {{ post.title }} </h3>
-        <h4> {{ post.date | date: "%-d %B %Y" }} </h4>
-        {{ post.excerpt }}
-      </div>
-    </md-list-item>
-    </a>
-    {% endunless %}
-    {% endfor %}
-  </md-list>
-</md-content>
+{% include posts.html %}
 <!-- CONTENT -->
 <md-content layout-padding class="window md-whiteframe-1dp" ng-view></md-content>
 

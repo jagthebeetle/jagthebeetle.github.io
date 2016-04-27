@@ -15,7 +15,4 @@ angular.module('jag', [
           }
         })
         .otherwise('/');
-  })
-  .controller('blog', BlogController);
-
-function BlogController() {};
+  });

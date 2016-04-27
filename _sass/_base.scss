@@ -5,9 +5,13 @@ a {
 }
 
 body {
-	font-size: $base-font-size;
-	line-height: $base-line-height;
+	font-size:$base-font-size;
+	line-height:$base-line-height;
 	overflow-x:hidden;
+}
+
+blockquote {
+	margin:0;
 }
 
 md-content {
@@ -194,8 +198,7 @@ svg {
 	}
 }
 
-/* FOOTER s*/
-
+/* FOOTER*/
 .ribbon {
 	height:$ribbon-height;
 	display: flex;
@@ -219,10 +222,10 @@ svg {
 	}
 
 	.dark {
-		background-color: $dark-accent;
+		background-color:$dark-accent;
 	}
 
 	.light {
-		background-color: $light-accent;
+		background-color:$light-accent;
 	}
 }

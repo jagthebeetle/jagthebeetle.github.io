@@ -1,6 +1,8 @@
 [ng-cloak] { display: none !important;}
 a {text-decoration:none;color:#000}
+body{font-family:'Roboto','Helvetica',sans-serif;}
 .posts, .muted, .window {
+  display: block;
   box-sizing: border-box;
   width: 600px;
   margin-left: auto;

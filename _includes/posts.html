@@ -1,19 +1,17 @@
-<md-content layout-padding class="md-whiteframe-1dp posts">
-<md-list>
+<div layout-padding class="md-whiteframe-1dp posts" role="listbox">
 {% for post in site.posts %}
 {% unless post.categories contains 'partials' %}
-<a href="{{post.url}}">
-	<md-list-item class="md-3-line">
-	<div class="md-list-item-text">
+<a href="{{post.url}}" role="listitem">
 		<article>
-			<h3> {{ post.title }} </h3>
-			<h4><time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%-d %B %Y" }}</time></h4>
+			<header>
+				<div>
+				<h3> {{ post.title }} </h3>
+				<time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%-d %B %Y" }}</time>
+				</div>
+			</header>
 			<blockquote cite="{{post.url}}"><p>{{ post.excerpt | strip_html }}</p></blockquote>
 		</article>
-	</div>
-	</md-list-item>
 </a>
 {% endunless %}
 {% endfor %}
-</md-list>
-</md-content>
+</div>

@@ -14,11 +14,20 @@ blockquote {
 	margin:0;
 }
 
-md-content {
-	background:$card-bg;
+blockquote p {
+	margin:0;
+    color: rgba(0,0,0,0.54);
+    font-size:$small-font-size;
+}
+
+article header {
+	line-height: 1.15;
+}
+
+.posts {
+	position:relative;
 	margin-bottom: 2 * $ribbon-height;
 	color:#333;
-	border-radius: 3px;
 }
 
 md-list-item {
@@ -38,12 +47,10 @@ time {
 
 /* VISUALIZATION */
 #srp {
-	width:100%;
-	height:100%;
 	position:fixed;
-	display: flex;
-	align-items: center;
-	top:0;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
 	pointer-events: none;
 }
 
@@ -139,10 +146,6 @@ svg {
 	.posts,.muted,.window {
 	  width:100%;
 	}
-
-	md-content {
-		border-radius:0;
-	}
 }
 
 .quote {
@@ -156,7 +159,6 @@ svg {
 /* NG-VIEW */
 .window {
 	position: relative;
-	background: $card-bg;
 
 	a {
 		color:$primary-color;

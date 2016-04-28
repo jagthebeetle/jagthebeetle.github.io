@@ -1,6 +1,5 @@
-angular.module('jag', [
-    'ngRoute', 
-    'ngMaterial'
+angular.module('jag',[
+    'ngRoute','ngAnimate'
   ])
   .config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode({
@@ -15,4 +14,7 @@ angular.module('jag', [
           }
         })
         .otherwise('/');
-  });
+  })
+  .controller('BlogController', BlogController);
+
+function BlogController($rootScope) {}

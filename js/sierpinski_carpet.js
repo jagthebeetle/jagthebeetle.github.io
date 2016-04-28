@@ -42,13 +42,8 @@ function fillCell(depth, division) {
   
   svg.append('rect')
     .attr('x', xPos * stretch)
-    .attr('y', yPos * stretch + 50)
-    .attr('width', stretch)
-    .attr('height', stretch)
-    .attr('opacity', 0)
-  .transition()
-  .duration(200)
     .attr('y', yPos * stretch)
-    .attr('opacity', 1)
+    .attr('width', stretch)
+    .attr('height', stretch);
 }
 })();

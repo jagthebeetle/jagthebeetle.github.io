@@ -1,0 +1,53 @@
+[ng-cloak] { display: none !important;}
+a {text-decoration:none;color:#000}
+.posts, .muted, .window {
+  box-sizing: border-box;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
+#title {
+  width: 200px;
+  height: 70px;
+  border: 1px solid #000;
+  margin: 14px auto;
+  z-index: 1;
+  position: relative; }
+.center {
+  text-align: center; }
+.navbar {
+  position: fixed;
+  left: calc((100% - 600px)/4);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column; }
+.navbar div {
+  margin: 5px;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  display: table;
+  border: 1px solid #000;
+  box-sizing: border-box;}
+.navbar div p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+.ribbon {
+height: 7px;
+display: flex;
+margin: 0;
+position: fixed;
+top: 0;
+left: 0;
+right: 0; }
+.ribbon div {
+  flex: 1;
+  height: 7px; }
+.ribbon .primary {
+  background-color: #0059b3; }
+.ribbon .accent {
+  background-color: #fd5e53; }
+.ribbon .dark {
+  background-color: #990000; }
+.ribbon .light {
+  background-color: #fff6a6; }

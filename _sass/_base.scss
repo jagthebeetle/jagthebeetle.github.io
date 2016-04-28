@@ -36,13 +36,6 @@ time {
 	font-size:$small-font-size;
 }
 
-.posts,.muted,.window {
-	box-sizing: border-box;
-	width:$content-width;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 /* VISUALIZATION */
 #srp {
 	width:100%;
@@ -74,48 +67,42 @@ svg {
 		stroke-width:1px;
 		fill:none;
 		pointer-events:none;
+		animation-duration: 500ms;
+		animation-name: slidein;
+		animation-timing-function: ease-in-out;
+		-webkit-transform:translate3d(0,0,0);
+		-webkit-backface-visibility: hidden;
+		outline: 1px solid transparent; /* Safari rendering oddities */
+}
+
+	@keyframes slidein {
+		from {
+			transform:translate3d(0,30px,0);
+			opacity:0;
+			-webkit-transform:translate3d(0,10px,0);
+		}
+
+		to {
+			transform:translate3d(0,0,0);
+			opacity:1;
+			-webkit-transform:translate3d(0,0,0);
+		}
 	}
 }
 
 /* TITLE, NAV */
 #title {
 	font-family:'Righteous';
-	width:200px;
-	height:$nav-height;
 	line-height:$nav-height;
-	border:1px solid #000;
-	margin: (2 * $ribbon-height) auto;
 	@include transition(all,$base-transition-time,$base-easing);
-	color:#000;
-	z-index:1;
-	position: relative;
 	&:hover {
 		background-color:#000;
 		color:#fff;
 	}
-	a {
-		color:#fff;
-	}
-}
-
-.center {
-	text-align: center;
 }
 
 .navbar {
-	position: fixed;
-	left:calc((100% - #{$content-width})/4);
-	transform: translateX(-50%);
-	display: flex;
-	flex-direction: column;
 	div {
-		margin: 5px;
-		width:75px;
-		height:75px;
-		text-align: center;
-		display: table;
-		border:1px solid #000;
-		box-sizing: border-box;
 		@include transition(all,$base-transition-time,$base-easing);
 		&:hover {
 			background-color:#000;
@@ -124,9 +111,6 @@ svg {
 		}
 		p {
 			font-family: 'Righteous';
-			display: table-cell;
-			vertical-align: middle;
-			text-align: center;
 		}
 	}
 }
@@ -195,37 +179,5 @@ svg {
 
 	&.ng-leave-active {
 		transform: translateX(-1000px);
-	}
-}
-
-/* FOOTER*/
-.ribbon {
-	height:$ribbon-height;
-	display: flex;
-	margin:0;
-	position: fixed;
-	top:0;
-	left:0;
-	right:0;
-
-	div {
-		flex:1;
-		height:$ribbon-height;
-	}
-
-	.primary {
-		background-color:$primary-color;
-	}
-
-	.accent {
-		background-color:$accent-color;
-	}
-
-	.dark {
-		background-color:$dark-accent;
-	}
-
-	.light {
-		background-color:$light-accent;
 	}
 }

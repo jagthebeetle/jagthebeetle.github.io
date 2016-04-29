@@ -91,6 +91,29 @@ article {
 		color:#fff;
 	}
 }
+.window {
+	@include transition(all,$base-transition-time,$base-easing);
+	
+	a {
+		color:$primary-color;
+	}
+
+	&.ng-enter {
+		transform: translateX(1000px);
+		transition-delay:$base-transition-time;
+	}
+
+	&.ng-enter-active {
+		transform: translateX(0);
+	}
+	&.ng-leave {
+		transform: translateX(0);
+	}
+
+	&.ng-leave-active {
+		transform: translateX(-1000px);
+	}
+}
 /* MEDIA OVERRIDES */
 @media (max-width:$content-width + 2*75px) {
 	.navbar {

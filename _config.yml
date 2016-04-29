@@ -13,3 +13,5 @@ url: "https://jagthebeetle.github.io" # the base hostname & protocol for your si
 markdown: kramdown
 sass:
   style: compressed
+gems:
+  - jekyll-sitemap

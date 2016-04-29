@@ -1,5 +1,3 @@
----
----
 @charset "utf-8";
 
 $base-font-size:   1em;
@@ -15,7 +13,7 @@ $accent-color:     #fd5e53;
 $dark-accent:      #990000;
 $light-accent:     #fff6a6;
 $card-bg:          rgba(255, 255, 255, 0.8);
-$nav-height:       70px;
+$nav-width:       75px;
 $ribbon-height:    7px;
 
 $content-width:    600px;
@@ -26,6 +24,3 @@ $content-width:    600px;
 	-o-transition: $attributes $time $function;
 	transition: $attributes $time $function;
 }
-
-@import "base";
-@import "syntax-highlighting";

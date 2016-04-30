@@ -12,7 +12,7 @@ body {
 	line-height:$base-line-height;
 	overflow-x:hidden;
 }
-h1,h2,h3,h4,body,blockquote,p,.ribbon {
+h1,h2,h3,h4,body,blockquote,.ribbon {
 	margin:0;
 	font-weight:normal;
 }
@@ -31,11 +31,12 @@ article {
 	position:fixed;
 	display: flex;
 }
-.posts, .muted, .window {
+.posts, .window {
 	box-sizing: border-box;
 	width: $content-width;
 	margin-left: auto;
-	margin-right: auto; 
+	margin-right: auto;
+	margin-bottom: 2 * $ribbon-height; 
 }
 @media (max-width:616px) {
 	.posts,.muted,.window {
@@ -135,7 +136,9 @@ article {
 }
 
 .posts {
-	margin-bottom: 2 * $ribbon-height;
+	a:not(:last-child) article {
+		border-bottom:1px solid #ddd;
+	}
 
 	article {
 		display:flex;
@@ -156,6 +159,7 @@ article {
 			p {
 				color: rgba(0,0,0,0.54);
 				font-size:$small-font-size;
+				margin:0;
 			}
 			flex:4;
 			padding-left:7px;

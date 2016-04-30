@@ -9,7 +9,7 @@
 				<time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%-d %B %Y" }}</time>
 				</div>
 			</header>
-			<blockquote cite="{{post.url}}"><p>{{ post.excerpt | strip_html }}</p></blockquote>
+			<blockquote cite="{{post.url}}"><p>{{ post.excerpt | strip_html | truncate: 160 }}</p></blockquote>
 		</article>
 </a>
 {% endunless %}

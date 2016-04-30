@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: angular
 title:  "whoami"
 date:   2016-04-19

@@ -1,13 +1,8 @@
 # Site settings
-title: Arts & Crufts
+title: jagthebeetle | Things & Thinks
 description: >
-  Jonathan Alvarez-Gutierrez's site on Google Analytics, JavaScript, writing,
-  and general brooding. Jonathan is a Solutions Consultant at Google in his
-  free time, but is otherwise preoccupied with transcendence, (his) thoughts 
-  language, games, stories, and music - all of which makes him an unfortunately
-  dull and commonplace individual. He notes that the word 'legend' means
-  'having to be read.' This site is legend.
-url: "https://jagthebeetle.github.io" # the base hostname & protocol for your site
+  Jonathan Alvarez-Gutierrez muses on transcendence, thought, language, and JavaScript. In his free time, he works in the digital analytics industry.
+url: "https://jagthebeetle.github.io"
 
 # Build settings
 markdown: kramdown

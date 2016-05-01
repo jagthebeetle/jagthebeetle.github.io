@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /*-partial.html
+Disallow: /*partial.html
 
 sitemap: https://jagthebeetle.github.io/sitemap.xml

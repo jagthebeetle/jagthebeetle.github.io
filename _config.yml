@@ -8,5 +8,8 @@ url: "https://jagthebeetle.github.io"
 markdown: kramdown
 sass:
   style: compressed
+exclude:
+  - makefile
+  - README.md
 gems:
   - jekyll-sitemap

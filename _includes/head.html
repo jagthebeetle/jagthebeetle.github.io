@@ -6,8 +6,10 @@
 <link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | prepend: site.url }}">
 <meta property="og:site_name" content="{{ site.title | escape }}">
 <meta property="og:type" content="{% if page.excerpt %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}">
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | replace: '\n',' ' | truncate: 160 }}{% else %}{{ site.description | strip_html | truncate: 160 | replace: '\n', ' ' }}{% endif %}">
+<meta property="og:image" content="{{ '/assets/me.jpg' | prepend: site.url }}">
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | replace: '\n',' ' | truncate: 160 }}{% else %}{{ site.description | strip_html | truncate: 160 | replace: '\n', ' ' }}{% endif %}">
 <meta name="robots" content="index,follow">
 <base href="/">

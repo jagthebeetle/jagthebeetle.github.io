@@ -19,7 +19,7 @@ never won a laughing contest against myself. And that's a fine place from which 
 any old disquisition.
 
 {: .center}
-![Camera Reflected in Author's Eye](/assets/eye.jpg){: .md-whiteframe-z1}
+![Camera Reflected in Author's Eye](/assets/eye.jpg)
 
 Case in point: we remark on that hideously extravagant mosaic recapitulating itself
 in the background (a variation on Sierpinski's carpet), wasting your browser's cycles and, 

@@ -1,17 +1,17 @@
-<head profile="http://www.w3.org/2005/10/profile">
+<head profile="http://www.w3.org/2005/10/profile" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
-<link rel="icon" 
-      type="image/png" 
-      href="{{ '/assets/favicon.png' | prepend: site.url }}">
+<link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | prepend: site.url }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:type" content="{% if page.excerpt %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}">
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | replace: '\n',' ' | truncate: 160 }}{% else %}{{ site.description | strip_html | truncate: 160 | replace: '\n', ' ' }}{% endif %}">
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | replace: '\n',' ' | truncate: 160 }}{% else %}{{ site.description | strip_html | truncate: 160 | replace: '\n', ' ' }}{% endif %}">
 <meta name="robots" content="index,follow">
 <base href="/">
-<style type="text/css">
-{% capture scss %}{% include critical.scss %}{% endcapture %}{{ scss | scssify }}
-</style>
+<style type="text/css">{% capture scss %}{% include critical.scss %}{% endcapture %}{{ scss | scssify }}</style>
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>

@@ -1,13 +1,10 @@
-<head profile="http://www.w3.org/2005/10/profile" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#" id="jagthebeetle" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+<head profile="http://www.w3.org/2005/10/profile" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
 	<base href="/">
 	<link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | prepend: site.url }}">
-	<meta itemprop="name" content="jagthebeetle">
-	<meta itemprop="logo" itemscope itemtype="https://schema.org/ImageObject" itemref="logo-url">
-	<meta id="logo-url" itemprop="url" content="{{ '/assets/logo.png' | prepend: site.url }}">
 	<meta property="og:site_name" content="{{ site.title | escape }}">
 	<meta property="og:type" content="{% if page.excerpt %}article{% else %}website{% endif %}">
 	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

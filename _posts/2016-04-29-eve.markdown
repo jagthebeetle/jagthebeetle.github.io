@@ -3,6 +3,9 @@ layout: post
 title:  "Eve"
 date:   2016-04-29
 categories: musing
+image: /assets/sun.jpg
+width: 2048
+height: 1536
 ---
 Tinker of things and thoughts, a thingsea of thinks and thinksea of things,
 entity conches and slippery concepts, Eve's tired thought cycles sank idly
@@ -31,32 +34,34 @@ decent funds, stands open far enough for little Eve, aged three in what we now
 know to be a memory, to step in.
 
 In fact, the door matches the bergamot-scent of the room. The purple carpet, 
-dream of naked feet, just taken out of mist-spangled boots, awaits buxom
-beneath. The door is the color of Earl Grey steeped too long, with the brew's
-translucent quality in the lovingly layered lacquer.
+dream of naked feet, awaits buxom beneath. The door is the color of Earl Grey 
+steeped too long, with the brew's translucent quality in the lovingly layered 
+lacquer.
 
-Books and cryptic paraphernalia, charts of subconscious terrae incognitae and
-books on magic or mathematics or both are arranged predictably around dad's 
-desk. A miraculously large window affords a grey view of the water beyond and
-below.
+Cryptic kabbalah, detailing subconscious terrae incognitae, books on magic or 
+mathematics or both are arranged predictably around dad's desk. A miraculously
+large window affords a grey view of the water beyond and below.
 
 Eve turns from the window and only just manages to scale the (to her still 
 vast) mesa of oak. She espies a cup.
 
 Steam ensconcing it and transfixing it through its central starry cavity, a 
-wheel of lemon epicycles about, much like Eve did in her travels here. The tea
-bag is obviously submerged, anchored to father's thumb, or perhaps vice versa.
+wheel of lemon epicycles about. The tea bag anchored to father's thumb, or
+perhaps vice versa, broods undisturbed below.
 
 "Would you like some?" Perhaps he was mustachioed or moustached, or 
 clean-shaven – in fact it was likeliest the latter, but at this point, 
-Mnemosyne's threads unravel and Eve is back in her urban eyrie.
+Mnemosyne's thread unravels and Eve is back in her urban eyrie.
+
+{: .center}
+![Sun setting over the Pacific ocean](/assets/sun.jpg)
 
 Softly lit – for Eve hates light a shade brighter than crepuscular, a hue other
 than golden – the apartment is thoughtfully decorated. It is, in fact, a 
-masterpiece of theory, and thrilling meditation on interior design – but is 
-actually unremarkable in practice.
+masterpiece of theory, and thrilling meditation on interior design – entirely 
+unremarkable in its execution.
 
-We don't really care too look like furniture store setpieces, after all. So 
+We don't really care too look like furniture store setpieces, anyway. So 
 although the oatmeal of the couch matches the off-white of the walls perfectly,
 the textures are just different enough to make them clash, and everyone who 
 visits has their eyes bounce unconvinced between the wall and sterile sponge of

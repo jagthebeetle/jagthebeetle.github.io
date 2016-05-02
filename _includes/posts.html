@@ -1,16 +1,23 @@
 <div layout-padding class="posts" role="list">
 {% for post in site.posts %}
 {% unless post.categories contains 'partials' %}
-<a href="{{post.url}}" role="listitem">
-		<article>
-			<header>
-				<div>
-				<h3> {{ post.title }} </h3>
-				<time datetime="{{ post.date | date_to_xmlschema }}" pubdate>{{ post.date | date: "%-d %B %Y" }}</time>
-				</div>
-			</header>
-			<blockquote cite="{{post.url}}"><p>{{ post.excerpt | strip_html | truncate: 160 }}</p></blockquote>
-		</article>
+<a href="{{post.url}}" role="listitem" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" itemref="me jagthebeetle">
+	<meta itemprop="mainEntityOfPage" content="{{post.url}}">
+	<meta itemprop="dateModified" content="{{ post.date | date_to_xmlschema }}">
+	<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+		<meta itemprop="url" content="{{ post.image | prepend: site.url }}">
+		<meta itemprop="width" content="{{ post.width }}">
+		<meta itemprop="height" content="{{ post.height }}">
+	</span>
+	<article>
+		<header>
+			<div>
+			<h3 itemprop="name"> {{ post.title }} </h3>
+			<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%-d %B %Y" }}</time>
+			</div>
+		</header>
+		<blockquote cite="{{post.url}}" itemprop="headline"><p>{{ post.excerpt | strip_html | truncate: 160 }}</p></blockquote>
+	</article>
 </a>
 {% endunless %}
 {% endfor %}

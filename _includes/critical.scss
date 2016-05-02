@@ -21,6 +21,9 @@ h1,h2,h3,h4,body,blockquote,.ribbon {
 article {
 	padding: 8px;
 }
+img {
+	max-width: 90%;
+}
 /* SHADOWS */
 .posts,.window,img {
 	box-shadow: 2px 2px $primary-color;

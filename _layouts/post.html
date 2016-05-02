@@ -5,43 +5,30 @@ layout: default
 {% include posts.html %}
 <!-- CONTENT -->
 <div layout-padding class="window" ng-view role="main">
-<article class="post">
-	<script type="application/ld+json">
-		{
-			"@context": "http://schema.org/",
-			"@type": "Article",
-			"name": "{{ page.title }}",
-			"author": {
-				"@type": "Person",
-				"url": "https://jagthebeetle.github.io",
-				"name": "jagthebeetle"
-			},
-			{% if page.date %}
-			"datePublished": "{{ page.date | date_to_xmlschema }}",
-			"dateModified": "{{ page.date | date_to_xmlschema }}",
-			{% endif %}
-			"publisher": {
-				"@type": "Person",
-				"url": "https://jagthebeetle.github.io",
-				"name": "jagthebeetle"
-			},
-			"headline": "{{ page.excerpt | strip_html | truncate: 110 }}",
-			"mainEntityOfPage": {
-				"@type": "WebPage",
-				"@id": "{{page.url}}"
-			}
-		}
-	</script>
+{% unless page.categories == empty %}
+<div class="post-content">
+	{{ content }}
+</div>
+{% else %}
+<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" itemref="me jagthebeetle">
+	<meta itemprop="mainEntityOfPage" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<meta itemprop="headline" content="{{ page.excerpt | strip_html | truncate: 110 }}">
 	<header class="post-header">
-		<h1 class="post-title">{{ page.title }}</h1>
+		<h1 class="post-title" itemprop="name">{{ page.title }}</h1>
 		{% if page.date %}
-		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" pubdate>{{ page.date | date: "%-d %B %Y" }}</time></p>
+		<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time>
+		<meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
+		</p>
+		<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+			<meta itemprop="url" content="{{ page.image | prepend: site.url }}">
+			<meta itemprop="width" content="{{ page.width }}">
+			<meta itemprop="height" content="{{ page.height }}">
+		</span>
 		{% endif %}
 	</header>
-
 	<div class="post-content">
 		{{ content }}
 	</div>
-
 </article>
+{% endunless %}
 </div>

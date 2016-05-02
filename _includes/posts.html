@@ -1,8 +1,8 @@
 <div class="posts" role="list">
 {% for post in site.posts %}
 {% unless post.categories contains 'partials' %}
-<a href="{{post.url}}" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" itemref="me jagthebeetle">
-	<meta itemprop="mainEntityOfPage" content="{{post.url}}">
+<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" itemref="me jagthebeetle">
+	<meta itemprop="mainEntityOfPage" content="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
 	<meta itemprop="dateModified" content="{{ post.date | date_to_xmlschema }}">
 	<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 		<meta itemprop="url" content="{{ post.image | prepend: site.url }}">
@@ -16,7 +16,7 @@
 			<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%-d %B %Y" }}</time>
 			</div>
 		</header>
-		<blockquote cite="{{post.url}}" itemprop="headline"><p>{{ post.excerpt | strip_html | truncate: 160 }}</p></blockquote>
+		<blockquote cite="{{post.url | prepend: site.baseurl | prepend: site.url }}" itemprop="headline"><p>{{ post.excerpt | strip_html | truncate: 160 }}</p></blockquote>
 	</article>
 </a>
 {% endunless %}

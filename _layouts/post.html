@@ -5,7 +5,7 @@ layout: default
 {% include posts.html %}
 <!-- CONTENT -->
 <div class="window" ng-view role="main">
-{% unless page.categories == empty %}
+{% if page.categories == empty %}
 <div class="post-content">
 	{{ content }}
 </div>
@@ -20,7 +20,7 @@ layout: default
 		<meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
 		</p>
 		<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-			<meta itemprop="url" content="{{ page.image | prepend: site.url }}">
+			<meta itemprop="url" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}">
 			<meta itemprop="width" content="{{ page.width }}">
 			<meta itemprop="height" content="{{ page.height }}">
 		</span>
@@ -30,5 +30,5 @@ layout: default
 		{{ content }}
 	</div>
 </article>
-{% endunless %}
+{% endif %}
 </div>

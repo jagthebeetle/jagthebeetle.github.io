@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-us" itemscope itemtype="https://schema.org/Blog">
 {% include head.html %}
+<body ng-app="jag">
 <span id="jagthebeetle" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 	<meta itemprop="name" content="jagthebeetle">
 	<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
 		<meta itemprop="url" content="{{ '/assets/logo.png' | prepend: site.url }}">
 	</span>
 </span>
-<body ng-app="jag">
 {% include gtm.html %}
 {% include nav.html %}
 <div id="srp" role="img" aria-label="Sierpinski Carpet"></div>
@@ -17,3 +17,4 @@
 {% include lib.html %}
 {% include scripts.html %}
 </body>
+</html>

@@ -5,6 +5,8 @@ title:  "whoami"
 date:   2016-04-19
 categories: partials musing
 image: /assets/eye.jpg
+width: 311
+height: 357
 ---
 When it isn't exactly clear what it
 means to begin at the beginning, often a little self-conscious meta-pondering

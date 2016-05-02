@@ -1,7 +1,7 @@
-<div layout-padding class="posts" role="list">
+<div class="posts" role="list">
 {% for post in site.posts %}
 {% unless post.categories contains 'partials' %}
-<a href="{{post.url}}" role="listitem" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" itemref="me jagthebeetle">
+<a href="{{post.url}}" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" itemref="me jagthebeetle">
 	<meta itemprop="mainEntityOfPage" content="{{post.url}}">
 	<meta itemprop="dateModified" content="{{ post.date | date_to_xmlschema }}">
 	<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">

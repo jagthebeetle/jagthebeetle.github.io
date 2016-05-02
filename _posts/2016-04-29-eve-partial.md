@@ -5,6 +5,8 @@ title:  "Eve"
 date:   2016-04-29
 categories: partials musing
 image: /assets/sun.jpg
+width: 2048
+height: 1536
 ---
 Tinker of things and thoughts, a thingsea of thinks and thinksea of things,
 entity conches and slippery concepts, Eve's tired thought cycles sank idly
@@ -60,7 +62,7 @@ than golden – the apartment is thoughtfully decorated. It is, in fact, a
 masterpiece of theory, and thrilling meditation on interior design – entirely 
 unremarkable in its execution.
 
-We don't really care too look like furniture store setpieces, anyway. So 
+We don't really care to look like furniture store setpieces, anyway. So 
 although the oatmeal of the couch matches the off-white of the walls perfectly,
 the textures are just different enough to make them clash, and everyone who 
 visits has their eyes bounce unconvinced between the wall and sterile sponge of

@@ -4,7 +4,7 @@ layout: default
 <!-- POSTS -->
 {% include posts.html %}
 <!-- CONTENT -->
-<div class="window" ng-view role="main">
+<div class="window" ng-view route-extend role="main">
 {% if page.categories == empty %}
 <div class="post-content">
 	{{ content }}

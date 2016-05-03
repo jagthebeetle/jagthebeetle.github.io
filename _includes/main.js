@@ -17,36 +17,46 @@ angular.module('jag',['ngRoute','ngAnimate'])
   .directive('routeExtend', function($document) {
     return {
       restrict: 'A',
-      link: function(scope, element) {
-        var onceToken;
+      priority: 401,
+      compile: function(tElement) {
 
-        scope.$on('$routeChangeSuccess', updateDom);
+        if (!tElement.text().length) {
+          tElement.parent().addClass('anim-active');
+        }
+        return {
+          preLink: function() {},
+          postLink: postLink
+        }
+        function postLink(scope, element) {
+          var onceToken;
 
-        function updateDom($event, newRoute) {
-          var template = newRoute && newRoute.locals && newRoute.locals.$template;
-          var title = getTitleFromTemplate(template);
-          if (title) {
-            $document[0].title = title + ' | ' + '{{ site.title }}';
-          } else {
-            $document[0].title = '{{ site.title }}';
+          scope.$on('$routeChangeSuccess', updateDom);
+
+          function updateDom($event, newRoute) {
+            var template = newRoute && newRoute.locals && newRoute.locals.$template;
+            var title = getTitleFromTemplate(template);
+            if (title) {
+              $document[0].title = title + ' | ' + '{{ site.title }}';
+            } else {
+              $document[0].title = '{{ site.title }}';
+            }
+
+            onceToken = onceToken || Number.isInteger(
+              setTimeout(function() {
+                element.parent().addClass('anim-active');
+              }, 0)
+            );
           }
 
-          onceToken = onceToken || Number.isInteger(
-            setTimeout(function() {
-              element.parent().addClass("anim-active")
-            }, 0)
-          );
-        }
-
-        function getTitleFromTemplate(str) {
-          if (str && str.match) {
-            var match = str.match(/<h1.*?>(.*?)<\/h1>/i);
-            if (match) {
-              return match[1];
+          function getTitleFromTemplate(str) {
+            if (str && str.match) {
+              var match = str.match(/<h1.*?>(.*?)<\/h1>/i);
+              if (match) {
+                return match[1];
+              }
             }
           }
         }
-
       }
     };
   });

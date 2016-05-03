@@ -24,10 +24,10 @@ angular.module('jag',['ngRoute','ngAnimate'])
           tElement.parent().addClass('anim-active');
         }
         return {
-          preLink: function() {},
-          postLink: postLink
+          preLink: preLink,
+          postLink: function() {}
         }
-        function postLink(scope, element) {
+        function preLink(scope, element) {
           var onceToken;
 
           scope.$on('$routeChangeSuccess', updateDom);

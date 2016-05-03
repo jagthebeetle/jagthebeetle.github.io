@@ -102,7 +102,8 @@ img {
 	a {
 		color: $primary-color;
 	}
-
+}
+.anim-active .window {
 	&.ng-enter {
 		transform: translateX(1000px);
 		transition-delay: $base-transition-time;

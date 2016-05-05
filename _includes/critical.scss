@@ -3,7 +3,11 @@ a {
 	text-decoration: none;
 	color: #000;
 }
-
+.square {
+	height: $content-width;
+	margin: 10px;
+	background-color:#fff;
+}
 body {
 	font-family: 'Roboto',sans-serif;
 	color: rgba(0,0,0,.9);

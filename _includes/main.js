@@ -14,6 +14,19 @@ angular.module('jag',['ngRoute','ngAnimate'])
         }
       });
   })
+  .directive('loadJs', function() {
+      return {
+        restrict: 'A',
+        link: function(scope, iEl, iAttrs) {
+          console.info(iAttrs);
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = iAttrs.loadJs;
+            script.async = false;
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      }
+  })
   .directive('routeExtend', function($document) {
     return {
       restrict: 'A',

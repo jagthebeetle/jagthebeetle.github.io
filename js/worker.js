@@ -1,4 +1,4 @@
-var HALF_EXTENT = 200;
+var HALF_EXTENT = 175;
 var EXTENT = HALF_EXTENT * 2;
 var MAX_DISTANCE = Math.sqrt(HALF_EXTENT * HALF_EXTENT * 3);
 var FIRST = [0,0,0];

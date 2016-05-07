@@ -19,7 +19,7 @@ Look long enough and the mesh seems organically to pop and unfurl, formicate, an
 thing to do, of course, is to replicate and transmogrify.
 
 Straightforward replication is dull, but constructive. As I'm not visualizing anything, except possible escape routes
-through a blacked out abyssaly empty flatland, I decided to ignore the 
+through a blacked-out, soulless flatland, I decided to ignore the 
 [common wisdom](http://www.scribblelive.com/blog/2012/04/04/rainbow-color-scales/) that 
 [rainbows are harmful](http://bl.ocks.org/mbostock/3290752), and encode distance from the starting point as the particular 
 path segment's hue.
@@ -40,14 +40,10 @@ rrt.connect(nearestNode, newNode)
 Thanks to Davies' original, we get the notion of not actually connecting `nearestNode` to `newNode`, but 
 rather marginally stepping towards it (refreshing our lovely trigonometry while we do so). This happens to be
 key, I think, in giving the structure a more organic shape. Otherwise you end up with something more 
-Kandinsky-esque, more like pick-up sticks than a venous, radical growth. I think there's also something about
-minimizing intersections, but I am playing the artist right now.
+Kandinsky-esque, more like pick-up sticks than a venous, radical growth.
 
-Contariwise, a smart, determined fellow at this point asks, "How do you calculate the nearestNode in sublinear time?"
-To this I respond, "Nay, naive computer scientist that I am, I take that pitiful approach you decry as O(n)! I 
-iterate through each node and calculate the distance! (Have at your k-d/R/R* trees!)"
-
-Hem. 
+(A smart, determined fellow at this point asks, "How do you calculate the nearestNode in sublinear time?"
+To this I respond, "I don't. (Have at your k-d/R/R* trees!)")
 
 A more interesting exercise for the nonce is to generalize this to three dimensions! (An opportunity to play 
 with threes.js not to be passed up!)
@@ -73,9 +69,9 @@ got the 72-box of Crayolas, and really likes centrioles and...tie-dye? Eh, let's
 
 It's like how [Quentin Blake](https://en.wikipedia.org/wiki/The_Twits#/media/File:The_Twits_first_edition.jpg) draws hair!
 
-(When you don't fully connect nodes, why does the tree only grow up-down-left-right? By ignoring the Z coordinate, I essentially
-pick the "nearest" point as squashed down along the Z-axis. (I guess these are called projections in proper-speak). 
-So I end up with a greater distribution of points tugging the tree back and forth along the Z axis. 
+(When you don't fully connect nodes, why does the tree only grow up-down-left-right? By ignoring the 
+Z coordinate, I pick the "nearest" point as squashed down along the Z-axis, onto the X-Y plane. 
+("Projections," these are also known as). So I end up with points pushing and pulling the tree along the Z axis. 
 Stuck between a rock and a hard place, you move along the plane in which you're sandwiched, right?
 #StatsExplanationsThatDon'tPassMuster)
 

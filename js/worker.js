@@ -6,7 +6,7 @@ var NODES = [FIRST];
 
 var src, dst, nearestTuple, dMin, absDistance, color;
 
-onmessage = function(e) {
+onmessage = function() {
 	dst = randomNode();
 	nearestTuple = nearestNode(dst, NODES);
 	src = nearestTuple[0];

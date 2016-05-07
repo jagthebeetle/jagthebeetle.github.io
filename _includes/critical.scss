@@ -236,12 +236,11 @@ img {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	pointer-events: none;
-}
-
-rect {
-	stroke: lighten($primary-color,50%);
-	stroke-width: 1px;
-	fill: none;
+	rect {
+		stroke: lighten($primary-color,50%);
+		stroke-width: 1px;
+		fill: none;
+	}
 }
 
 #braid {

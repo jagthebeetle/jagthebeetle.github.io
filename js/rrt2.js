@@ -4,14 +4,24 @@
   var WIDTH = container.node().clientWidth;
   var HEIGHT = container.node().clientHeight;
   var svg = container.append('svg')
-    .attr('width', WIDTH)
-    .attr('height', HEIGHT);
+    .attr({
+      'width': WIDTH,
+      'height': HEIGHT
+    });
+
+  svg.append('rect')
+    .attr({
+      'width': WIDTH,
+      'height': HEIGHT,
+      'fill': "#000",
+      'stroke': 'none'
+    });
 
 
-  var first = [WIDTH/2, HEIGHT/2];
-  var nodes = [first];
+  var treeSeed = [WIDTH/2, HEIGHT/2];
+  var nodes = [treeSeed];
 
-  var maxDistance = Math.sqrt(.5*(WIDTH*WIDTH+HEIGHT*HEIGHT));
+  var maxDistance = .5 * Math.sqrt(WIDTH*WIDTH+HEIGHT*HEIGHT);
 
   function newPathD(src, dst) {
     return "M" + src[0] + " " + src[1] +
@@ -50,7 +60,7 @@
 
   var dst, nearestPair, dMin, i = 0;
   var absDistance, stroke, strokeWidth;
-  d3.timer(function() {
+  d3.timer(function render() {
     dst = randomNode();
     nearestPair = nearestNode(dst, nodes);
     src = nearestPair[0];
@@ -60,11 +70,11 @@
       return;
     }
     nodes.push(dst);
-    absDistance = distance(dst, first);
+    absDistance = distance(dst, treeSeed);
     stroke = 'hsl(' + (360*absDistance/maxDistance) + ',100%,50%)';
     svg.append('path')
       .attr('d', newPathD(src, dst))
       .attr('stroke', stroke);
     if (i++ > ITERATIONS) return true;
-  })
+  });
 })();

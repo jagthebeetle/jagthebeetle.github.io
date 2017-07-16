@@ -16,7 +16,7 @@ $card-bg:          rgba(255, 255, 255, 0.7);
 $nav-width:       75px;
 $ribbon-height:    7px;
 
-$content-width:    600px;
+$content-width:    750px;
 
 @mixin transition($attributes, $time, $function) {
 	-webkit-transition: $attributes $time $function;

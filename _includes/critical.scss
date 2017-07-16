@@ -124,7 +124,7 @@ img {
 }
 .anim-active .window {
   &.ng-enter {
-    transform: translateX(1000px);
+    transform: translateX(1100px);
     transition-delay: $base-transition-time;
   }
   &.ng-enter-active {
@@ -134,7 +134,7 @@ img {
     transform: translateX(0);
   }
   &.ng-leave-active {
-    transform: translateX(-1000px);
+    transform: translateX(-1100px);
   }
 }
 /* MEDIA OVERRIDES */

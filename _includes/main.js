@@ -15,24 +15,25 @@ angular.module('jag',['ngRoute','ngAnimate'])
       });
   })
   .directive('loadJs', function() {
-      return {
-        restrict: 'A',
-        link: function(scope, iEl, iAttrs) {
-          console.info(iAttrs);
-            var script = document.createElement("script");
-            script.type = "text/javascript";
-            script.src = iAttrs.loadJs;
-            script.async = false;
-            document.getElementsByTagName('head')[0].appendChild(script);
-        }
+    return {
+      restrict: 'A',
+      link: function(scope, iEl, iAttrs) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = iAttrs.loadJs;
+        script.async = false;
+        document.getElementsByTagName('head')[0].appendChild(script);
       }
+    }
   })
-  .directive('routeExtend', function($document) {
+  .directive('routeExtend', function($document, $timeout) {
     return {
       restrict: 'A',
       priority: 401,
       compile: function(tElement) {
-
+        // Check if the current ng-view is empty (as on the homepage). If so,
+        // enable animations. Again, the landing page is the only page for which
+        // we care to have animations disabled.
         if (!tElement.text().length) {
           tElement.parent().addClass('anim-active');
         }
@@ -55,11 +56,15 @@ angular.module('jag',['ngRoute','ngAnimate'])
               $document[0].title = '{{ site.title }}';
             }
 
+            // Animations are not enabled until the first route load. This
+            // prevents a user from having their landing page animate in, which
+            // is unnecessary. Subsequent route loads are allowed to animate, as
+            // this improves the flow between pages. The $timeout ensures that
+            // animations are activated after the DOM insertion has occurred.
             onceToken = onceToken || Number.isInteger(
-              setTimeout(function() {
+              $timeout(function() {
                 element.parent().addClass('anim-active');
-              }, 0)
-            );
+              }, 0));
           }
 
           function getTitleFromTemplate(str) {
